@@ -1,0 +1,135 @@
+﻿@{
+    ViewData["Title"] = "Interest";
+}
+@{
+    Layout = null;
+}
+
+<!-- Kiara -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>@ViewData["Title"] - G2G</title>
+    <link rel="stylesheet" href="/css/interests.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="/js/interests.js" defer></script>
+    <script src="https://kit.fontawesome.com/cfa537f10b.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="init()">
+    <h1 class="interests-title">What do you like?</h1>
+    <div class="information" id="userHint">
+        <p>You can search for games that interest you. Please select at least one game.</p>
+    </div>
+    <div id="search-box" class="search-box">
+        <input type="text" id="search-input" class="search-input" placeholder="Search for games!" autocomplete="off">
+        <a id="search-btn" class="search-btn" href="#">
+            <i id="icon-btn" class="fas fa-search"></i>
+        </a>
+    </div>
+    <div class="information">
+        <p>Top six best recommendations of the community</p>
+    </div>
+    <div class="interests-grid">
+        <!-- Used for Hover -->
+        <!-- Hover Image 1 -->
+        <div class="game-container" onclick="selectGame(this)">
+            <!-- What is shown before hover? -->
+            <div class="game-img">
+                <p class="gameTitle">Life is Strange</p>
+                <img src="https://gamequitters.com/wp-content/uploads/LOL_CMS_152_Article_01_dsnpbw97lpr2tcdw6cjm.jpg">
+            </div>
+            <!-- What is shown at hover? -->
+            <div class="game-selected">
+                <p>Life is Strange</p>
+            </div>
+        </div>
+        <!-- Hover Image 2 -->
+        <div class="game-container" onclick="selectGame(this)">
+            <!-- What is shown before hover? -->
+            <div class="game-img">
+                <p class="gameTitle">Counter Strike</p>
+                <img src="https://gamequitters.com/wp-content/uploads/LOL_CMS_152_Article_01_dsnpbw97lpr2tcdw6cjm.jpg">
+            </div>
+            <!-- What is shown at hover? -->
+            <div class="game-selected">
+                <p>Counter Strike</p>
+            </div>
+        </div>
+        <!-- Hover Image 3 -->
+        <div class="game-container" onclick="selectGame(this)">
+            <!-- What is shown before hover? -->
+            <div class="game-img">
+                <p class="gameTitle">League Of Legends</p>
+                <img src="https://gamequitters.com/wp-content/uploads/LOL_CMS_152_Article_01_dsnpbw97lpr2tcdw6cjm.jpg">
+            </div>
+            <!-- What is shown at hover? -->
+            <div class="game-selected">
+                <p>League Of Legends</p>
+            </div>
+        </div>
+        <!-- Hover Image 4 -->
+        <div class="game-container" onclick="selectGame(this)">
+            <!-- What is shown before hover? -->
+            <div class="game-img">
+                <p class="gameTitle">Game 4</p>
+                <img src="https://gamequitters.com/wp-content/uploads/LOL_CMS_152_Article_01_dsnpbw97lpr2tcdw6cjm.jpg">
+            </div>
+            <!-- What is shown at hover? -->
+            <div class="game-selected">
+                <p>Game 4</p>
+            </div>
+        </div>
+        <!-- Hover Image 5 -->
+        <div class="game-container" onclick="selectGame(this)">
+            <!-- What is shown before hover? -->
+            <div class="game-img">
+                <p class="gameTitle">Game 5</p>
+                <img src="https://gamequitters.com/wp-content/uploads/LOL_CMS_152_Article_01_dsnpbw97lpr2tcdw6cjm.jpg">
+            </div>
+            <!-- What is shown at hover? -->
+            <div class="game-selected">
+                <p>Game 5</p>
+            </div>
+        </div>
+        <!-- Hover Image 6 -->
+        <div class="game-container" onclick="selectGame(this)">
+            <!-- What is shown before hover? -->
+            <div class="game-img">
+                <p class="gameTitle">Game 6</p>
+                <img src="https://gamequitters.com/wp-content/uploads/LOL_CMS_152_Article_01_dsnpbw97lpr2tcdw6cjm.jpg">
+            </div>
+            <!-- What is shown at hover? -->
+            <div class="game-selected">
+                <p>Game 6</p>
+            </div>
+        </div>
+    </div>
+    <div id="interest-submit">
+        <button disabled type="submit" id="interest-btn">Done</button>
+    </div>
+    <!-- Search Pop-Up -->
+    <div class="bgForModalSearch">
+        <div class="contentSearchModal" id="contentSearchModal">
+            <div class="closeCross" id="closeSearchCross">+</div>
+            <p>Search</p>
+            <form method="" action="" id="allGamesForm">
+            </form>
+        </div>
+    </div>
+    <!-- Pop-Up for the final View -->
+    <!-- Should show, when clicked on the done button  -->
+    <div class="bgForModalFinalGameView">
+        <div class="contentFinalModal" id="contentFinalModal">
+            <div class="closeCross" id="closeFinalGameView">+</div>
+            <p>Is this your final selection?</p>
+            <form method="" action="/" id="finalGamesView">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

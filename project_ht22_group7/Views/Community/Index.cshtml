@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "Community";
+}
+@section Styles {
+    <link href="~/css/community.css" rel="stylesheet" type="text/css" />
+}
+
+@section Scripts {
+    <script src="~/js/community.js" defer></script>
+}
+
+
+    <div class="image">
+        <a class="game-link" href="/Game">
+            <img src="~/img/elden_ring.png" class="gaming2" />
+            <h1>Elden Ring</h1>
+        </a>
+    </div>
+
+    <div class="dropdown">
+        <button type="button" id="drop-button" class="drop-button">Elden Ring</button>
+        <div id="communites" class="dropdown-content">
+            <a href="#">Community 2</a>
+            <a href="#">Community 3</a>
+            <a href="#">Community 4</a>
+        </div>
+    </div>
+    <button type="button" class="collaps">Add Post</button>
+    <div class="add-post">
+        <textarea id="addpost-text" name="addpost-text"></textarea>
+        <div class="addpost-buttons">
+            <button class="addfile-button" type="button">
+                <i class="fa-solid fa-images"></i>
+            </button>
+            <button class="upload-post" type="button">
+                <p>Post</p>
+            </button>
+        </div>
+
+    </div>
+    <div class="post">
+        <div class="post-image">
+            <img data-img data-gameID="/img/eldenring_post.png" src="" alt="gaming" />
+        </div>
+        <div class="post-main">
+            <div class="post-header">
+                <p class="post-title">Username</p>
+                <p class="date">2022-10-11</p>
+            </div>
+            <div class="post-section">
+                <p class="post-text">
+                    Example text Example text Example text Example text Example text Example text Example
+                    text Example text Example text Example text Example text Example text Example text
+                </p>
+                <div class="post-icons">
+                    <div class="post-icon"><img src="/img/flag.png" /></div>
+                    <div class="post-icon"><img src="/img/coin.png" /></div>
+                </div>
+            </div>
+        </div>
+        <div class="comments">
+            <p class="comments-title">Comments</p>
+            <p class="comments-author">Username</p>
+            <p class="comment">This is a comment...</p>
+        </div>
+    </div>

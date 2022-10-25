@@ -1,0 +1,251 @@
+/*START PAGE*/
+*{
+    font-family: Poppins;
+    padding:0;
+    margin:0;
+}
+html{
+    height:100%;
+    font-size: 125%;
+}
+body{
+    background-color:#041730;
+    height:100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+    background-color: #041730;
+    background-image: url("../img/back2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/*Container for the icon and the text box*/
+.iconAndTextContainer{
+    margin-bottom: 1rem;
+    position: relative;
+    width: 80%;
+}
+
+/*Icon*/
+#informationBox img {
+    height: 8rem;
+    width: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-70%, -75%);
+}
+
+/*Informationbox*/
+#informationBox {
+    position:relative;
+    border-radius: 1rem;
+    background-color: #0C2E5B;
+    width: 70%;
+    float: right;
+    border: 3.5px solid white;
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);;
+}
+
+#informationBox p{
+    padding:1rem;
+    font-size:0.8rem;
+    color: #DCF1FF;
+}
+
+/*Div for the Login and Registration Button*/
+.buttondiv {
+    margin-top: 1rem;
+    width: fit-content;
+}
+
+button{
+    background-color: #1F5DAF;
+    color: white;
+    padding:1rem;
+    width:100%;
+    margin-bottom:1rem;
+    font-size:1rem;
+    border: 0;
+    border-radius: 1rem;
+    cursor:pointer;
+    box-shadow: 4px 4px 6px 0px rgba(0,0,0,0.5);;
+}
+
+button:last-child{
+    margin-bottom:0;
+}
+
+/*Login Popup
+https://www.youtube.com/watch?v=gLWIYk0Sd38*/
+.bgForModalLogin{
+    width:100%;
+    height: 100%;
+    background-color: rgba(4,23,48,0.7);
+    position:absolute;
+    top:0;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+.contentLogInModal{
+    height: fit-content;
+    width: 70%;
+    background-color: rgba(12,46,91,1);
+    border-radius: 5px;
+    text-align:center;
+    padding:1rem;
+    position:relative;
+}
+
+.contentLogInModal p {
+    color:#DCF1FF;
+    text-align: center;
+    margin-bottom:1rem;
+    font-size: 0.8rem;
+}
+
+.closeCross{
+    position: absolute;
+    top:0;
+    right:2%;
+    font-size:1rem;
+    color:#C4FF00;
+    transform:rotate(45deg);
+    /*The mouse arrow will change to a pointer while hovering*/
+    cursor:pointer;
+}
+
+.labelForPopup{
+    color:#DCF1FF;
+    display:block;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.textfieldForPopup {
+    box-sizing: border-box;
+    background-color: #C4FF00;
+    padding:1rem;
+    width:100%;
+    display:block;
+    margin:1rem 0;
+    font-size:0.8rem;
+}
+
+#popUpLogin {
+    background-color:#C4FF00;
+    color:#041730;
+    margin:1rem 0;
+}
+
+a{
+    text-decoration: none;
+    color:#DCF1FF;
+    cursor:pointer;
+    font-size:0.7rem;
+}
+
+/*Register Pop Up*/
+.bgForModalRegister{
+    width:100%;
+    height: 100%;
+    background-color: rgba(4,23,48,0.7);
+    position:absolute;
+    top:0;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+.contentRegModal{
+    height: fit-content;
+    width: 70%;
+    background-color: rgba(12,46,91,1);
+    border-radius: 0.5rem;
+    text-align:center;
+    padding:1rem;
+    position:relative;
+}
+
+.contentRegModal p {
+    color:#DCF1FF;
+    text-align: center;
+    margin-bottom:1rem;
+    font-size: 0.8rem;
+}
+
+#popUpRegister {
+    background-color:#C4FF00;
+    color:#041730;
+    margin:1rem 0;
+}
+
+/*Design for the Desktop screen size*/
+@media screen and (min-width:1000px)
+{
+    main {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        flex-direction: row;
+    }
+
+    /*Container for the icon and the text box*/
+    .iconAndTextContainer{
+        margin-bottom: 1rem;
+        top:5rem;
+        width: 100%;
+    }
+
+    #informationBox {
+        width:fit-content;
+    }
+
+    #informationBox img {
+        height: 20rem;
+        transform: translate(-75%, -80%);
+    }
+
+    .buttondiv {
+        margin-top: 1rem;
+        width: 100%;
+        display:grid;
+        justify-content: center;
+    }
+
+    .buttondiv button{
+        width:100%;
+        padding-left:5rem;
+        padding-right:5rem;
+    }
+
+    /*Login Popup*/
+    .bgForModalLogin{
+        width:100%;
+        height: 100%;
+        justify-content:flex-end;
+    }
+    .contentLogInModal{
+        right:10%;
+        height: fit-content;
+        width: 20%;
+    }
+
+    /*Register Pop Up*/
+    .bgForModalRegister{
+        width:100%;
+        height: 100%;
+        justify-content: flex-end;
+    }
+    .contentRegModal{
+        right:10%;
+        height: fit-content;
+        width: 20%;
+    }
+}

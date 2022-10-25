@@ -1,0 +1,163 @@
+.profile-section {
+    background-color: #041730;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.profile-info {
+    margin-top: 2em;
+}
+
+.profile-icon {
+    margin-top: 1em;
+    height: 8em;
+    width: 8em;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    position: relative;
+    background: url("/img/defaultPP.png");
+    background-size: 100% 100%;
+}
+
+.username {
+    color: #A0D113;
+    font-size: 20px;
+}
+
+#n_coins {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#n_posts {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.biography {
+    padding: 0.3em;
+    border: 2px solid #1D2C3FFF;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.userGames-grid {
+    display: grid;
+    grid-template-columns: auto auto 50px;
+    background-color: #1F5DAF;
+    grid-gap: 0.5em;
+    padding: 0.5em;
+}
+
+.userGames-grid > div {
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.3);
+    box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
+}
+
+#gameImages {
+    width: 100%;
+    height: 100%;
+}
+
+.moreUserGame {
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #A0D113;
+    color: #041730;
+}
+
+.card-user-info {
+    background-color: #1F5DAF;
+    text-align: left;
+    padding: 0.4em;
+    height: 4.9em;
+}
+
+.card-profile-pic #profile-photo {
+    width: 4em;
+    height: 4em;
+    margin-left: 0.2em;
+    float: left;
+    font-size: 15px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.card-user #username {
+    color: white;
+    margin-top: 1.5em;
+    margin-left: 5em;
+    font-size: 15px;
+}
+
+.card-community #community {
+    color: white;
+    margin-top: -1.5em;
+    font-size: 15px;
+    float: right;
+    margin-right: 0.5em;
+}
+
+.card {
+    background-color: #0A3C7D;
+    margin-top: 1em;
+}
+
+.card:last-child {
+    margin-bottom: 1em;
+}
+
+.image {
+    height: 5em;
+}
+
+.card-section {
+    background-color: #1F5DAF;
+}
+
+.card-title {
+    padding: 0.5em 1em;
+}
+
+.card-text {
+    display: -webkit-box;
+    font-size: 0.8em;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0em 1em;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.card-date  {
+    padding: 0.5em;
+    font-size: 0.7em;
+    text-align: right;
+}
+
+.card-button {
+    margin: 1em;
+    font-size: 0.9em;
+    border-radius: 0.5em;
+    background-color: #C4FF00;
+    color: #041730;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card-button:hover {
+    box-shadow: 0 0 1em 0.1em #041730;
+}
+
+#profilepicture {
+    width: 100%;
+}

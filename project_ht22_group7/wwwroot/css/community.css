@@ -1,0 +1,252 @@
+.image{
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.game-link{
+  text-decoration: none;
+}
+
+.image img { 
+  max-width:100%;
+  height:auto;
+  display: block;
+  margin: auto;
+}
+
+.image h1{
+  display: none;
+  position: absolute;
+  bottom:0;
+  left:0;
+  color: #DCF1FF;
+  font-size: 1.5rem;
+  background-color: #04173081;
+  padding: 0.5rem 0.5rem;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+  width: 100%;  
+  margin-top: 0.5rem;
+}
+
+.drop-button{
+  background-color: #0C2E5Bff;
+  cursor: pointer;
+  color: #DCF1FF;
+  padding: 0.8rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 0.8rem;
+}
+
+.drop-button::after{
+  content: '\25BC';
+  position: absolute;
+  right: 0.8rem;
+}
+
+.dropdown-content{
+  display: none;
+  position: absolute;
+  background-color: #0C2E5Bff;
+  overflow: auto;
+  width: 100%;
+  text-align: left;
+}
+
+.dropdown-content a{
+  color: #DCF1FF;
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  text-decoration: none;
+  display: block;
+}
+
+.show{
+  display: block;
+}
+
+.collaps {
+  background-color: #0C2E5Bff;
+  cursor: pointer;
+  color: #DCF1FF;
+  padding: 0.8rem;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.collaps:after{
+  content: '\002B';
+  float: right;
+}
+
+.active{
+  text-align: center;
+}
+
+.active:after{
+  content:"\2212";
+}
+
+.add-post{
+  padding: 0 0.8rem;
+  display: none;
+  overflow: hidden;
+  background-color: #0C2E5Bff;
+}
+
+.addpost-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.addfile-button {
+  font-size: 1.5rem;
+  border-radius: 0.3rem;
+  background-color: transparent;
+  color: #DCF1FF;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#addpost-text{
+  resize: none;
+  width: 100%;
+  min-height: 6rem;
+  background-color: #1F5DAF;
+  border: none;
+  color:#DCF1FF;
+  padding-inline-start: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.upload-post{
+  float: right;
+  font-weight: bold;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 0.3rem;
+  background-color: #A0D113ff;
+  color: #041730;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+
+}
+
+.post{
+  background-color: #1F5DAF;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+
+}  
+
+.post-image{
+  padding: 0.5rem 0.5rem 0 0.5rem; 
+}
+
+.post-image img{
+  max-width:100%;
+  height:auto;
+}
+
+.post-main{
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+}
+
+.post-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-section {
+  display: flex;  
+}
+
+.post-title{
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+} 
+
+.post-text{
+  font-size: 0.8rem;
+  text-align: left;
+}
+
+.post-icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: right;
+}
+
+.post-icon{
+  padding: 0.5rem;
+}
+
+.date{
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+.comments{
+  background-color: #0C2E5Bff;
+  padding: 0.8rem;
+  text-align: left;
+}
+
+.comments-title{
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.comments-author{
+  font-size: 0.8rem;
+  margin-bottom: 0.5em;
+}
+
+.comment{
+  font-size: 0.8rem;
+}
+
+@media screen and (min-width: 768px) {
+  .dropdown{
+    display:none;
+  }
+
+  .image h1{
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+}
+
+
+
+
+
+
+

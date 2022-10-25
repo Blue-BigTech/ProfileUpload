@@ -1,0 +1,347 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+html {
+    height: 100%;
+    font-size: 125%;
+}
+
+body {
+    height: 100%;
+    color: #DCF1FF;
+    background-color: #041730;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.interests-title{
+    color:#DCF1FF;
+    font-size: 1rem;
+}
+
+.search-box {
+    position: relative;
+    background-color: #A0D113;
+    height: 2rem;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    width: 70%;
+    margin: 1rem;
+}
+
+.search-input {
+    outline: none;
+    border: none;
+    width: calc(100% - 1rem);
+    color: #041730;
+    float: left;
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    background-color: transparent;
+}
+
+.search-input::placeholder {
+    color: #041730;
+}
+
+.search-btn {
+    color: #041730;
+    float: right;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 1rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+#icon-btn {
+    pointer-events: none
+}
+
+/*Search Pop-Up*/
+.bgForModalSearch{
+    width:100%;
+    height: 100%;
+    background-color: rgba(4,23,48,0.7);
+    position:absolute;
+    top:0;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+
+.contentSearchModal{
+    height: fit-content;
+    width: 70%;
+    background-color: rgba(12,46,91,1);
+    border-radius: 0.5rem;
+    text-align:center;
+    padding:1rem;
+    position:relative;
+    /*For Scrolling through the content*/
+    max-height:70%;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+/*Div where all Game-Objects are shown*/
+#allGamesDiv {
+    width:100%;
+}
+
+/*Div for every Row (each Row shows one Game-Object)*/
+.gameContent{
+    display:grid;
+    width:100%;
+    grid-template-columns: 20% 70% 10%;
+    /*flex-direction: column;*/
+    height:3rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.allGamesImage{
+    height:2rem;
+    width:2rem;
+    object-fit: cover;
+    display:flex;
+}
+.allSelectedGamesImage{
+    height:2rem;
+    width:2rem;
+    object-fit: cover;
+    display:flex;
+}
+/*For the checkbox*/
+.gameSelect{
+    height:2rem;
+    width:2rem;
+}
+.gameSelectFinal{
+    height:2rem;
+    width:2rem;
+}
+
+input[type="checkbox"]:checked{
+    accent-color:#A0D113;
+}
+
+/*The Game name */
+.gameName {
+    color:#DCF1FF;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.selectedGameName {
+    color:#DCF1FF;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.closeCross{
+    position: absolute;
+    top:0;
+    right:2%;
+    font-size:1rem;
+    color:#C4FF00;
+    transform:rotate(45deg);
+    /*The mouse arrow will change to a pointer while hovering*/
+    cursor:pointer;
+}
+
+#userHint{
+    display: none;
+}
+
+/*Text information for the User (p)*/
+.information{
+    position:relative;
+    font-size: 0.8rem;
+    width:70%;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap:2rem;
+    row-gap: 2rem;
+    padding: 1rem;
+}
+
+.game-container {
+    position: relative;
+}
+
+.gameTitle{
+    width:100%;
+    background-color: #0C2E5B;
+    text-align: center;
+    position:absolute;
+    bottom:0;
+}
+
+.game-img {
+    width: 30vw;
+    height: 30vw;
+    position:relative;
+}
+
+.game-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+}
+
+.game-selected{
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    opacity:0;
+    transition: opacity 0.3s ease-in-out;
+    background-color: #0C2E5B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-selected:hover{
+    opacity:1;
+    /*Font color for hover*/
+    color:#DCF1FF;
+}
+
+.game-selected {
+    text-align: center;
+    font-size: 1rem;
+}
+
+#interest-submit{
+    width: 70%;
+    padding:1rem;
+    text-align: center;
+}
+
+#interest-btn{
+    background-color:#DCF1FF;
+    color:#041730;
+    padding:0.5rem;
+    width:100%;
+    border: 1px solid #0C2E5B;
+    border-radius: 0.5rem;
+    cursor:pointer;
+    font-size: 1rem;
+}
+
+/*Final Game View Pop-Up*/
+.bgForModalFinalGameView{
+    width:100%;
+    height: 100%;
+    background-color: rgba(4,23,48,0.7);
+    position:absolute;
+    top:0;
+    justify-content: center;
+    align-items: center;
+    display:none;
+}
+
+.contentFinalModal{
+    height: fit-content;
+    width: fit-content;
+    background-color: rgba(12,46,91,1);
+    border-radius: 0.5rem;
+    text-align:center;
+    padding:1rem;
+    position:relative;
+    /*For Scrolling through the content*/
+    max-height:70%;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+/*TODOOO AUSPROBIEREN*/
+.btnDiv {
+    width: 100%;
+    height: 2rem;
+    display:grid;
+    justify-content: center;
+}
+
+.btnDiv button{
+    background-color:#C4FF00;
+    color:#041730;
+    padding-inline:4rem;
+    border: 1px solid #0C2E5B;
+    border-radius: 0.5rem;
+    cursor:pointer;
+    font-size: 1rem;
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+}
+
+/*Design for the Desktop screen size*/
+@media screen and (min-width:1000px)
+{
+    .interests-grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        /*column-gap:2rem;
+        row-gap: 2rem;
+        padding: 1rem;*/
+    }
+
+    .game-img {
+        width: 10vw;
+        height: 10vw;
+        position:relative;
+    }
+
+    .search-box {
+        /*position: relative;
+        background-color: #A0D113;
+        height: 2rem;
+        border-radius: 1rem;
+        padding: 0.5rem;*/
+        width: 35%;
+        /*margin: 1rem;*/
+    }
+
+    .information{
+        width:35%;
+    }
+
+    #userHint {
+        display:block;
+        margin: 0.8rem;
+    }
+
+    #interest-btn {
+        width:20%;
+    }
+
+    .contentSearchModal{
+        width: fit-content;
+        overflow-y:scroll;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+    }
+}

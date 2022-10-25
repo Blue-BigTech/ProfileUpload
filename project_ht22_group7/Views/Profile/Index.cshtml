@@ -1,0 +1,114 @@
+﻿@{
+    ViewData["Title"] = "Profile";
+}
+@section Styles {
+    <link href="/css/profile.css" rel="stylesheet" type="text/css" />
+}
+
+
+    <div class="profile-section">
+        <div id="UploadForm">
+        <div class="profile-icon">
+            <img src="@ViewBag.ProfilePicture" id="profilepicture" />
+            
+        </div>
+        
+            <form method="post" enctype="multipart/form-data" asp-controller="Profile" asp-action="ProfilePhoto">
+                <input type="file" name="photo" accept="image/gif, image/jpeg, image/png" style="display: none;" id="filephoto" />
+                <button type="submit" id="uploadphoto" style="display: none">Upload</button>
+            </form>
+        </div>
+        <div class="profile-info">
+            <h2 class="username">username</h2>
+            <i class="fa-solid fa-pen"><label id="n_posts"> # Posts</label></i>
+            </br>
+            <i class="fa-solid fa-sack-dollar"><label id="n_coins"> # Coins</label></i>
+        </div>
+    </div>
+
+    <div class="biography">
+        @*<p class="card-text">*@
+        <textarea rows="5" cols="60" class="card-text-input" placeholder="Write something interesting about you here…" disabled="disabled">@ViewBag.CardText</textarea>
+        @*</p>*@
+        <i class="fa fa-pencil-square-o card-text-edit" aria-hidden="true"></i>
+        <i class="fa fa-floppy-o card-text-save" aria-hidden="true"></i>
+    </div>
+
+    <div class="userGames-grid">
+        <div class="userGame1"><img src="https://d.newsweek.com/en/full/834343/call-duty-black-ops-3-logo.jpg" id="gameImages"></div>
+        <div class="userGame2"><img src="https://www.minecraft.net/content/dam/games/minecraft/key-art/MC_The-Wild-Update_540x300.jpg" id="gameImages"></div>
+        <div class="moreUserGame">+</div>
+    </div>
+
+    <div class="card">
+        <div class="card-user-info" ->
+            <div class="card-profile-pic">
+                <img src="@ViewBag.ProfilePicture" id="profile-photo">
+            </div>
+            <div class="card-user">
+                <h2 id="username">username</h2>
+            </div>
+            <div class="card-community">
+                <h2 id="community">community</h2>
+            </div>
+        </div>
+        <div class="image"></div>
+        <div class="card-section">
+            <p class="card-title">What is Lorem Ipsum</p>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p class="card-date">2022-10-06</p>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-user-info" ->
+            <div class="card-profile-pic">
+                <img src="@ViewBag.ProfilePicture" id="profile-photo">
+            </div>
+            <div class="card-user">
+                <h2 id="username">username</h2>
+            </div>
+            <div class="card-community">
+                <h2 id="community">community</h2>
+            </div>
+        </div>
+        <div class="image"></div>
+        <div class="card-section">
+            <p class="card-title">What is Lorem Ipsum</p>
+            <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p class="card-date">2022-10-06</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+                integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+                crossorigin="anonymous"></script>
+    <script>
+            
+        $(function () {
+            $(".card-text-edit").click(function () {
+                $(".card-text-input").removeAttr("disabled");
+            });
+
+            $(".card-text-save").click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "/Profile/UpdateCardText",
+                    dataType: "json",
+                    data: { data: $(".card-text-input").val() },
+                    success: function (response) {
+                        $(".card-text-input").attr("disabled", "disabled");
+                        //$("#result").empty().append(response);
+                    }
+                });
+            });
+
+            $("#profilepicture").on('click', function () {
+                $("input[id='filephoto']").click();
+                $("#uploadphoto").show();
+            });
+
+            $("#uploadphoto").click(function () {
+                $("#uploadphoto").hide();
+            });
+        });
+    </script>

@@ -1,0 +1,57 @@
+.card {
+    background-color: #0A3C7D;
+    margin-top: 1rem;
+}
+
+.card:last-child {
+    margin-bottom: 1rem;
+}
+
+.image {
+    height: 5rem;
+}
+
+.card-section {
+    background-color: #1F5DAF;
+}
+
+.card-title {
+    padding: 0.5rem 1rem;
+}
+
+.card-text {
+    display: -webkit-box;
+    font-size: 0.8rem;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0rem 1rem;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.card-date  {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    text-align: right;
+}
+
+.card-button {
+    margin: 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    background-color: #C4FF00;
+    color: #041730;
+    border: none;
+    text-decoration: 0 solid transparent;
+    cursor: pointer;
+    font-weight: bold;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    padding: 0.5rem 1rem;
+}
+
+.card-button:hover {
+    box-shadow: 0 0 1rem 0.1rem #041730;
+}

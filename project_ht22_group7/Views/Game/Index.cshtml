@@ -1,0 +1,76 @@
+﻿@using System.Web
+@using Microsoft.AspNetCore.Html
+@using System.Text.RegularExpressions
+@model project_ht22_group7.ViewModels.GameData;
+@{
+    ViewData["Title"] = "Game";
+}
+@section Styles {
+    <link href="~/css/gamepage.css" rel="stylesheet" type="text/css" />
+}
+
+    @section Scripts {
+    <script src="/js/gamepage.js" defer></script>
+}
+
+<h1>@Model.Name</h1>
+<div class="gameimage">
+    <img src="@Model.Screenshots[0].ImgPath" alt="gaming">
+</div>
+<div class="button-div">
+    @if(Model.UserFollow){
+        <div class="button-div">
+            <form asp-action="Unfollow" method="post">
+                <input type="hidden" name="gameId" value="@Model.AppID" />
+                <input type="submit" value="Unfollow" class="unfollow-button" />
+            </form>
+        </div>
+        <div class="button-div">
+            <a class= "community-button" href="/Community?gameId=@Model.AppID">
+                <p>Community</p>
+            </a>
+        </div>
+    }
+    else{
+        <div class="button-div">
+            <form asp-action="Follow" method="post">
+                <input type="hidden" name="gameId" value="@Model.AppID" />
+                <input type="submit" value="Follow" class="follow-button" />
+            </form>
+        </div>
+    }
+</div>
+<div class="tag-div">
+    @foreach (var tag in Model.Categories)
+    {
+        <div class="tag">
+            <p>@tag.Description</p>
+        </div>
+    }
+    @foreach (var tag in Model.Genres)
+    {
+        <div class="tag">
+            <p>@tag.Description</p>
+        </div>
+    }
+</div>
+@{
+    if (Regex.IsMatch(Model.About.ToLower().Trim(), "<(\\s*[(\\/?)\\w+]*)")){
+        HtmlString msg = new HtmlString(Model.About);
+        <div class="about-game">
+            @msg
+        </div>
+    }
+    else{
+        <div class="about-game">
+            <p>@Model.About</p>
+        </div>
+    }
+}
+
+@{
+    string url = "https://store.steampowered.com/app/" + Model.AppID.ToString();
+}
+<a class="store-button"href=@url>
+    <p>Go to store</p>
+</a>

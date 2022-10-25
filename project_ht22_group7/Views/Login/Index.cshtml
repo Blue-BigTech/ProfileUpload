@@ -1,0 +1,81 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Login";
+}
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!-- Kiara -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - G2G</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="js/loginPopup.js" defer></script>
+    <script src="https://kit.fontawesome.com/cfa537f10b.js" crossorigin="anonymous"></script>
+</head>
+<body onload="init()">
+    <main>
+        <!-- icon and welcome-text -->
+        <div class="iconAndTextContainer">
+            <!-- Circle for the Logo -->
+            <div id="informationBox">
+                <div>
+                    <img class="logo" src="img/LogoG2G.png">
+                </div>
+                <p>
+                    What is Gametogether?</br>Your place for connection with other Gamingmembers
+                    </br></br>
+                    Join communities, play games, have fun!
+                </p>
+            </div>
+        </div>
+        <!--Button area for Login and Register -->
+        <div class="buttondiv">
+            <button type="submit" id="loginBtn">Login</button>
+            </br>
+            <button type="submit" id="registerBtn">Register</button>
+        </div>
+        <!-- Login Pop UP -->
+        <div class="bgForModalLogin">
+            <div class="contentLogInModal">
+                <div class="closeCross" id="closeLoginCross">+</div>
+                <p>Login</p>
+                <form method="" action="/">
+                    <label for="usernameFieldLogin" class="labelForPopup">Username</label>
+                    <input type="text" id="usernameFieldLogin" class="textfieldForPopup" required>
+                    <label for="passwordFieldLogin" class="labelForPopup">Password</label>
+                    <input type="text" id="passwordFieldLogin" class="textfieldForPopup" required></br>
+                    <button type="submit" id="popUpLogin">Login</button></br>
+                </form>
+                <a id="refToRegister">I have no account</a>
+            </div>
+        </div>
+        <!-- Register Pop-Up -->
+        <div class="bgForModalRegister">
+            <div class="contentRegModal">
+                <div class="closeCross" id="closeRegCross">+</div>
+                <p>Register</p>
+                <form method="" action="/Login/Interests">
+                    <label for="usernameFieldRegister" class="labelForPopup">Username</label>
+                    <input type="text" id="usernameFieldRegister" class="textfieldForPopup" required>
+                    <label for="passwordFieldRegister" class="labelForPopup">Password</label>
+                    <input type="text" id="passwordFieldRegister" class="textfieldForPopup" required>
+                    <label for="passwordRepeatRegister" class="labelForPopup">Repeat Password</label>
+                    <input type="text" id="passwordRepeatRegister" class="textfieldForPopup" required></br>
+                    <button type="submit" id="popUpRegister">Create</button></br>
+                    <a id="refToLogin">I already have an account</a>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+

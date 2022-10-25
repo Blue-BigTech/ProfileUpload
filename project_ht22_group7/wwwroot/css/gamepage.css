@@ -1,0 +1,90 @@
+.gameimage{
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;  
+}
+
+.gameimage img{
+    max-width:100%;
+    height:auto;
+}
+
+.button-div{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.community-button {
+    text-decoration:none;
+    cursor: pointer;
+    font-weight: bold;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+
+.follow-button, .unfollow-button, .community-button {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 0.3rem;
+    background-color: #A0D113ff;
+    color: #041730;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tag-div{
+    display: flex;
+    justify-content: left;  
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.tag{
+    background-color: #0C2E5Bff;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+    margin: 0.2rem 0.2rem;
+}
+
+.about-game{
+    background-color: #1F5DAF;
+    min-height: 10rem;
+    padding: 0.8rem;
+    text-align: left;
+    font-size:0.8rem;
+}
+
+.about-game img {
+    margin: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.about-game h1, h2, h3, h4, h5, h6 {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.store-button {
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    margin-top: 2em;
+    width: 70%;
+    margin-bottom: 4em;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 0.3rem;
+    background-color: #A0D113ff;
+    color: #041730;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}

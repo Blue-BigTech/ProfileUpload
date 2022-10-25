@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>@ViewData["Title"] - G2G</title>
+        <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+        <link rel="stylesheet" href="/css/header_footer.css">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <script src="/js/header_footer.js" defer></script>
+        <script src="https://kit.fontawesome.com/cfa537f10b.js" crossorigin="anonymous"></script>
+    
+        @RenderSection("Styles", required: false)
+        @await RenderSectionAsync("Scripts", required: false)
+    </head>
+    <body>
+        <header>
+            <img src="/img/LogoG2G.png" alt="L">
+            <h1 id="header-title">@ViewData["Title"]</h1>
+            <div id="search-box" class="search-box">
+                <input type="text" id="search-input" class="search-input" placeholder="Search for games!" autocomplete="off">
+                <a id="search-btn" class="search-btn" href="#">
+                    <i id="icon-btn" class="fas fa-search"></i>
+                </a>
+            </div>
+        </header>
+        <main>
+            <div class="column-left">
+                <div class="column-menu">
+                    <a href="/Home">
+                        <i class="fa-solid fa-house-user"></i>
+                        <p>Home</p>
+                    </a>
+                    <a href="/Community">
+                        <i class="fa-solid fa-comments"></i>
+                        <p>Communities</p>
+                    </a>
+                    <a href="/Events">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <p>Events</p>
+                    </a>
+                    <a href="/Profile">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Profile</p>
+                    </a>
+                </div>
+                <h1>Recommended</h1>
+                <div class="column-recommended">
+                    <div class="col-game-card">
+                        <a class="col-game-link" href="">
+                            <div class="col-game-contents">
+                                <img class="col-game-card-img" src="/img/gamingimg.jpg" alt="gaming">
+                                <p class="col-game-card-title">Counter Strike</p>
+                                <button class="col-game-follow">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-game-card">
+                        <a class="col-game-link" href="">
+                            <div class="col-game-contents">
+                                <img class="col-game-card-img" src="/img/gamingimg.jpg" alt="gaming">
+                                <p class="col-game-card-title">Counter Strike</p>
+                                <button class="col-game-follow">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-game-card">
+                        <a class="col-game-link" href="">
+                            <div class="col-game-contents">
+                                <img class="col-game-card-img" src="/img/gamingimg.jpg" alt="gaming">
+                                <p class="col-game-card-title">Counter Strike</p>
+                                <button class="col-game-follow">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="column-middle">
+               @RenderBody()
+            </div>
+            <div class="column-right">
+                <h1>Communities</h1>
+                <div class="column-communities">
+                    <div class="col-game-card">
+                        <a class="col-game-link" href="/Community">
+                            <div class="col-game-contents">
+                                <img class="col-game-card-img" src="/img/eldenring_small.png" alt="gaming">
+                                <p class="col-game-card-title">Elden Ring</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-game-card">
+                        <a class="col-game-link" href="">
+                            <div class="col-game-contents">
+                                <img class="col-game-card-img" src="/img/gamingimg.jpg" alt="gaming">
+                                <p class="col-game-card-title">Counter Strike</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-game-card">
+                        <a class="col-game-link" href="">
+                            <div class="col-game-contents">
+                                <img class="col-game-card-img" src="/img/gamingimg.jpg" alt="gaming">
+                                <p class="col-game-card-title">Counter Strike</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-game-card">
+                        <a class="col-game-link" href="">
+                            <div class="col-game-contents">
+                                <img class="col-game-card-img" src="/img/gamingimg.jpg" alt="gaming">
+                                <p class="col-game-card-title">Counter Strike</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-game-card">
+                        <a class="col-game-link" href="">
+                            <div class="col-game-contents">
+                                <img class="col-game-card-img" src="/img/gamingimg.jpg" alt="gaming">
+                                <p class="col-game-card-title">Counter Strike</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-game-card">
+                        <a class="col-game-link" href="">
+                            <div class="col-game-contents">
+                                <img class="col-game-card-img" src="/img/gamingimg.jpg" alt="gaming">
+                                <p class="col-game-card-title">Counter Strike</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-game-card">
+                        <a class="col-game-link" href="">
+                            <div class="col-game-contents">
+                                <img class="col-game-card-img" src="/img/gamingimg.jpg" alt="gaming">
+                                <p class="col-game-card-title">Counter Strike</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <a href="/">
+                <i class="fa-solid fa-house-user"></i>
+            </a>
+            <a href="/Community">
+                <i class="fa-solid fa-comments"></i>
+            </a>
+            <a href="/Events">
+                <i class="fa-solid fa-calendar-days"></i>
+            </a>
+            <a href="/Profile">
+                <i class="fa-solid fa-user"></i>
+            </a>
+        </footer>
+    </body>
+</html>
